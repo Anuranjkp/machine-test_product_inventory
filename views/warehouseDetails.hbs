@@ -1,0 +1,24 @@
+<h2>Warehouse Number {{warehouse.warehouse_number}}</h2>
+
+<h3>WAREHOUSE DETAILS</h3>
+<ul>
+    <li>Warehouse number: {{warehouse.warehouse_number}}</li>
+    <li>Stock limit: {{warehouse.stock_limit}}</li>
+    <li>warehouse Id: {{warehouse._id}}</li>
+</ul>
+<br>
+<h3>Product details in warehouse</h3>
+{{#each products}}
+<ul>
+    <li>Product Name: {{this.[0].productName}}</li>
+    <li>Product id: {{this.[0].product_id}}</li>
+</ul>
+{{/each}}
+<br>
+<h3>stock details</h3>
+{{#each stocks}}
+<ul>
+    <li>Product Id: {{this.product_id}}</li>
+    <li>Quantity: {{this.qty}}</li>
+</ul>
+{{/each}}
